@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.biastomo.crew.kuyliah">
+    <uses-permission
+    android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission
+    android:name="android.permission.VIBRATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplashScreen"
+            android:theme="@style/SplashScreenStyle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="Kuyliah!"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".Jadwal"
+            android:label="@string/title_activity_jadwal"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Tugas"
+            android:label="@string/title_activity_tugas"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".EditJadwal"
+            android:label="@string/title_activity_edit_jadwal"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".EditTugas"
+            android:label="@string/title_activity_edit_tugas"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <receiver android:name=".JadwalReceiver" android:process=":remote"/>
+        <receiver android:name=".TugasReceiver" android:process=":remote"/>
+
+    </application>
+
+</manifest>

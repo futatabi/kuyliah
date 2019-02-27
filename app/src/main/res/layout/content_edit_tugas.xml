@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/abc_floating_window_z"
+    android:paddingEnd="@dimen/abc_floating_window_z"
+    android:paddingTop="@android:dimen/notification_large_icon_height">
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.ebook.EditTugas"
+    tools:showIn="@layout/edit_tugas">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Tugas"
+        android:id="@+id/namatugas" />
+
+    <EditText
+        android:layout_below="@id/namatugas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editnamatugas"
+        android:inputType="textCapWords"
+        android:singleLine="true"
+        android:capitalize="words" />
+
+    <TextView
+        android:layout_below="@id/editnamatugas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tanggal"
+        android:id="@+id/tgltugas" />
+
+    <EditText
+        android:layout_below="@id/tgltugas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/edittgltugas"
+        android:onClick="edittgltugas"
+        android:singleLine="true"
+        android:maxLength="10" />
+
+    <TextView
+        android:layout_below="@id/edittgltugas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Waktu"
+        android:id="@+id/waktutugas" />
+
+    <EditText
+        android:layout_below="@id/waktutugas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:onClick="editwaktu"
+        android:id="@+id/editwaktu"
+        android:singleLine="true"
+        android:capitalize="sentences"
+        android:maxLength="5" />
+
+    <TextView
+        android:layout_below="@id/editwaktu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deskripsi Tugas"
+        android:id="@+id/desktugas" />
+
+    <EditText
+        android:layout_below="@id/desktugas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editdesktugas"
+        android:inputType="textCapSentences|textMultiLine"
+        android:capitalize="sentences" />
+    <Button
+        android:layout_below="@id/editdesktugas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="save tugas"
+        android:id="@+id/savetugas" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Batal"
+        android:id="@+id/batal"
+        android:layout_alignTop="@+id/savetugas"
+        android:layout_alignRight="@+id/editdesktugas"
+        android:layout_alignEnd="@+id/editdesktugas" />
+</RelativeLayout>

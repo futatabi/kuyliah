@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditJadwal"
+    android:paddingStart="@dimen/abc_floating_window_z"
+    android:paddingEnd="@dimen/abc_floating_window_z"
+    android:paddingTop="@android:dimen/notification_large_icon_height">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Mata Kuliah"
+        android:id="@+id/namamatkul" />
+
+    <EditText
+        android:layout_below="@id/namamatkul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:id="@+id/editnamamatkul"
+        android:capitalize="words" />
+
+    <TextView
+        android:layout_below="@id/editnamamatkul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hari"
+        android:id="@+id/harijadwal" />
+
+    <EditText
+        android:layout_below="@id/harijadwal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:singleLine="true"
+        android:ems="10"
+        android:id="@+id/editharijadwal"
+        android:password="false"
+        android:clickable="false" />
+
+    <TextView
+        android:layout_below="@id/editharijadwal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Waktu"
+        android:id="@+id/waktujadwal" />
+
+    <EditText
+        android:layout_below="@id/waktujadwal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/editwaktu"
+        android:onClick="editwaktu"
+        android:singleLine="true"
+        android:editable="false"
+        android:clickable="true"
+        android:maxLength="5"
+        android:minLines="5" />
+
+    <TextView
+        android:layout_below="@id/editwaktu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ruangan"
+        android:id="@+id/ruangjadwal" />
+
+    <EditText
+        android:layout_below="@id/ruangjadwal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:singleLine="true"
+        android:ems="10"
+        android:id="@+id/editruangan"
+        android:layout_gravity="center_horizontal"
+        android:capitalize="words" />
+
+    <TextView
+        android:layout_below="@id/editruangan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dosen"
+        android:id="@+id/dosenjadwal" />
+
+    <EditText
+        android:layout_below="@id/dosenjadwal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:id="@+id/editdosen"
+        android:capitalize="words" />
+
+    <TextView
+        android:layout_below="@id/editdosen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SKS"
+        android:id="@+id/sksjadwal" />
+
+    <EditText
+        android:layout_below="@id/sksjadwal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:singleLine="true"
+        android:ems="10"
+        android:id="@+id/editsks"
+        android:maxLength="3" />
+
+    <Button
+        android:layout_below="@id/editsks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="save jadwal"
+        android:id="@+id/savejadwal" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Batal"
+        android:id="@+id/batal"
+        android:layout_below="@+id/editsks"
+        android:layout_alignRight="@+id/editsks"
+        android:layout_alignEnd="@+id/editsks" />
+
+
+</RelativeLayout>
